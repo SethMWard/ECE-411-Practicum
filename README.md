@@ -1,1 +1,1 @@
-ECE-411-Practicum T11
+ECE-411-Practicum
