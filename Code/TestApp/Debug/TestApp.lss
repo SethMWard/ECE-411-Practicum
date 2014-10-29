@@ -1,0 +1,339 @@
+
+TestApp.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  000001da  0000026e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001da  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  00800100  00800100  0000026e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000026e  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  0000029e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000001fb  00000000  00000000  000002d6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000015a  00000000  00000000  000004d1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000187  00000000  00000000  0000062b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000c0  00000000  00000000  000007b4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001b8  00000000  00000000  00000874  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001f5  00000000  00000000  00000a2c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000028  00000000  00000000  00000c21  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   8:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+   c:	0c 94 b4 00 	jmp	0x168	; 0x168 <__vector_3>
+  10:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  14:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  18:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  1c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  20:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  24:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  28:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  2c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  30:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  34:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  38:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  3c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  40:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  44:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  48:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  4c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  50:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  54:	0c 94 6e 00 	jmp	0xdc	; 0xdc <__vector_21>
+  58:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  5c:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  60:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+  64:	0c 94 46 00 	jmp	0x8c	; 0x8c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_clear_bss>:
+  74:	21 e0       	ldi	r18, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+
+0000007c <.do_clear_bss_loop>:
+  7c:	1d 92       	st	X+, r1
+
+0000007e <.do_clear_bss_start>:
+  7e:	a2 30       	cpi	r26, 0x02	; 2
+  80:	b2 07       	cpc	r27, r18
+  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
+  84:	0e 94 48 00 	call	0x90	; 0x90 <main>
+  88:	0c 94 eb 00 	jmp	0x1d6	; 0x1d6 <_exit>
+
+0000008c <__bad_interrupt>:
+  8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000090 <main>:
+volatile uint8_t activated;
+volatile uint8_t armed;
+
+int main(void)
+{
+	setbit(DDRB, PINB0);	// Set pin B0 to an output
+  90:	20 9a       	sbi	0x04, 0	; 4
+	setbit(DDRD, PIND7);	// Set pin D7 to an output
+  92:	57 9a       	sbi	0x0a, 7	; 10
+	clearbit(DDRB, PINB1);	// Set pin B1 to an input
+  94:	21 98       	cbi	0x04, 1	; 4
+	setbit(PORTB, PINB1);	// Pull up pin B1
+  96:	29 9a       	sbi	0x05, 1	; 5
+	setbit(PCICR, PCIE0);	// Enable interrupts for PCIE0
+  98:	e8 e6       	ldi	r30, 0x68	; 104
+  9a:	f0 e0       	ldi	r31, 0x00	; 0
+  9c:	80 81       	ld	r24, Z
+  9e:	81 60       	ori	r24, 0x01	; 1
+  a0:	80 83       	st	Z, r24
+	setbit(PCMSK0, PCINT1);	// Enable interrupt from PCINT1
+  a2:	eb e6       	ldi	r30, 0x6B	; 107
+  a4:	f0 e0       	ldi	r31, 0x00	; 0
+  a6:	80 81       	ld	r24, Z
+  a8:	82 60       	ori	r24, 0x02	; 2
+  aa:	80 83       	st	Z, r24
+	setbit(ADCSRA, ADPS2);	// Set prescaler to 64 (1)
+  ac:	ea e7       	ldi	r30, 0x7A	; 122
+  ae:	f0 e0       	ldi	r31, 0x00	; 0
+  b0:	80 81       	ld	r24, Z
+  b2:	84 60       	ori	r24, 0x04	; 4
+  b4:	80 83       	st	Z, r24
+	setbit(ADCSRA, ADPS1);	// Set prescaler to 64 (2)
+  b6:	80 81       	ld	r24, Z
+  b8:	82 60       	ori	r24, 0x02	; 2
+  ba:	80 83       	st	Z, r24
+	clearbit(ADMUX, ADLAR);	// Right align ADC register
+  bc:	ac e7       	ldi	r26, 0x7C	; 124
+  be:	b0 e0       	ldi	r27, 0x00	; 0
+  c0:	8c 91       	ld	r24, X
+  c2:	8f 7d       	andi	r24, 0xDF	; 223
+  c4:	8c 93       	st	X, r24
+	setbit(ADMUX, REFS0);	// Set external ADC voltage reference
+  c6:	8c 91       	ld	r24, X
+  c8:	80 64       	ori	r24, 0x40	; 64
+  ca:	8c 93       	st	X, r24
+	setbit(ADCSRA, ADIE);	// Enable ADC interrupts
+  cc:	80 81       	ld	r24, Z
+  ce:	88 60       	ori	r24, 0x08	; 8
+  d0:	80 83       	st	Z, r24
+	setbit(ADCSRA, ADEN);	// Enable ADC
+  d2:	80 81       	ld	r24, Z
+  d4:	80 68       	ori	r24, 0x80	; 128
+  d6:	80 83       	st	Z, r24
+	sei();					// Enable interrupts
+  d8:	78 94       	sei
+  da:	ff cf       	rjmp	.-2      	; 0xda <main+0x4a>
+
+000000dc <__vector_21>:
+		}
+	}
+}
+
+ISR(ADC_vect)
+{	
+  dc:	1f 92       	push	r1
+  de:	0f 92       	push	r0
+  e0:	0f b6       	in	r0, 0x3f	; 63
+  e2:	0f 92       	push	r0
+  e4:	11 24       	eor	r1, r1
+  e6:	2f 93       	push	r18
+  e8:	8f 93       	push	r24
+  ea:	9f 93       	push	r25
+  ec:	ef 93       	push	r30
+  ee:	ff 93       	push	r31
+	uint8_t low_bits = ADCL;					// Low end bits
+  f0:	80 91 78 00 	lds	r24, 0x0078
+	uint16_t level = (ADCH << 8) | low_bits;	// Put registers together
+  f4:	20 91 79 00 	lds	r18, 0x0079
+  f8:	90 e0       	ldi	r25, 0x00	; 0
+  fa:	92 2b       	or	r25, r18
+	
+	if(level > 0x200)
+  fc:	81 30       	cpi	r24, 0x01	; 1
+  fe:	92 40       	sbci	r25, 0x02	; 2
+ 100:	20 f0       	brcs	.+8      	; 0x10a <__vector_21+0x2e>
+	{
+		setbit(PORTD, PIND7); //Turn on light
+ 102:	5f 9a       	sbi	0x0b, 7	; 11
+		activated = 1;
+ 104:	81 e0       	ldi	r24, 0x01	; 1
+ 106:	80 93 00 01 	sts	0x0100, r24
+	}
+	
+	if (armed)
+ 10a:	80 91 01 01 	lds	r24, 0x0101
+ 10e:	88 23       	and	r24, r24
+ 110:	29 f0       	breq	.+10     	; 0x11c <__vector_21+0x40>
+		setbit(ADCSRA, ADSC); // Start next conversion
+ 112:	ea e7       	ldi	r30, 0x7A	; 122
+ 114:	f0 e0       	ldi	r31, 0x00	; 0
+ 116:	80 81       	ld	r24, Z
+ 118:	80 64       	ori	r24, 0x40	; 64
+ 11a:	80 83       	st	Z, r24
+	
+}
+ 11c:	ff 91       	pop	r31
+ 11e:	ef 91       	pop	r30
+ 120:	9f 91       	pop	r25
+ 122:	8f 91       	pop	r24
+ 124:	2f 91       	pop	r18
+ 126:	0f 90       	pop	r0
+ 128:	0f be       	out	0x3f, r0	; 63
+ 12a:	0f 90       	pop	r0
+ 12c:	1f 90       	pop	r1
+ 12e:	18 95       	reti
+
+00000130 <armDevice>:
+
+void armDevice(void)
+{
+	int i;
+	clearbit(PORTB, PINB0);
+ 130:	28 98       	cbi	0x05, 0	; 5
+ 132:	8f e0       	ldi	r24, 0x0F	; 15
+ 134:	90 e0       	ldi	r25, 0x00	; 0
+	for (i = 0; i < 15; i++)
+	{
+		_delay_ms(500);
+		togglebit(PORTB, PINB0);
+ 136:	31 e0       	ldi	r19, 0x01	; 1
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 138:	2f e9       	ldi	r18, 0x9F	; 159
+ 13a:	46 e8       	ldi	r20, 0x86	; 134
+ 13c:	51 e0       	ldi	r21, 0x01	; 1
+ 13e:	21 50       	subi	r18, 0x01	; 1
+ 140:	40 40       	sbci	r20, 0x00	; 0
+ 142:	50 40       	sbci	r21, 0x00	; 0
+ 144:	e1 f7       	brne	.-8      	; 0x13e <armDevice+0xe>
+ 146:	00 c0       	rjmp	.+0      	; 0x148 <armDevice+0x18>
+ 148:	00 00       	nop
+ 14a:	25 b1       	in	r18, 0x05	; 5
+ 14c:	23 27       	eor	r18, r19
+ 14e:	25 b9       	out	0x05, r18	; 5
+ 150:	01 97       	sbiw	r24, 0x01	; 1
+
+void armDevice(void)
+{
+	int i;
+	clearbit(PORTB, PINB0);
+	for (i = 0; i < 15; i++)
+ 152:	00 97       	sbiw	r24, 0x00	; 0
+ 154:	89 f7       	brne	.-30     	; 0x138 <armDevice+0x8>
+	{
+		_delay_ms(500);
+		togglebit(PORTB, PINB0);
+	}
+	armed = 1;
+ 156:	81 e0       	ldi	r24, 0x01	; 1
+ 158:	80 93 01 01 	sts	0x0101, r24
+	setbit(ADCSRA, ADSC);	// Start first conversion
+ 15c:	ea e7       	ldi	r30, 0x7A	; 122
+ 15e:	f0 e0       	ldi	r31, 0x00	; 0
+ 160:	80 81       	ld	r24, Z
+ 162:	80 64       	ori	r24, 0x40	; 64
+ 164:	80 83       	st	Z, r24
+ 166:	08 95       	ret
+
+00000168 <__vector_3>:
+	
+    }
+}
+
+ISR(PCINT0_vect)
+{
+ 168:	1f 92       	push	r1
+ 16a:	0f 92       	push	r0
+ 16c:	0f b6       	in	r0, 0x3f	; 63
+ 16e:	0f 92       	push	r0
+ 170:	11 24       	eor	r1, r1
+ 172:	2f 93       	push	r18
+ 174:	3f 93       	push	r19
+ 176:	4f 93       	push	r20
+ 178:	5f 93       	push	r21
+ 17a:	6f 93       	push	r22
+ 17c:	7f 93       	push	r23
+ 17e:	8f 93       	push	r24
+ 180:	9f 93       	push	r25
+ 182:	af 93       	push	r26
+ 184:	bf 93       	push	r27
+ 186:	ef 93       	push	r30
+ 188:	ff 93       	push	r31
+	if (!bit_is_clear(PINB, PINB1))
+ 18a:	19 9b       	sbis	0x03, 1	; 3
+ 18c:	13 c0       	rjmp	.+38     	; 0x1b4 <__vector_3+0x4c>
+	{
+		
+		if (!armed)
+ 18e:	80 91 01 01 	lds	r24, 0x0101
+ 192:	81 11       	cpse	r24, r1
+ 194:	03 c0       	rjmp	.+6      	; 0x19c <__vector_3+0x34>
+			armDevice();
+ 196:	0e 94 98 00 	call	0x130	; 0x130 <armDevice>
+ 19a:	0c c0       	rjmp	.+24     	; 0x1b4 <__vector_3+0x4c>
+		else
+		{
+			clearbit(PORTB, PINB0);
+ 19c:	28 98       	cbi	0x05, 0	; 5
+			clearbit(PORTD, PIND7);
+ 19e:	5f 98       	cbi	0x0b, 7	; 11
+			activated = 0;
+ 1a0:	10 92 00 01 	sts	0x0100, r1
+			armed = 0;
+ 1a4:	10 92 01 01 	sts	0x0101, r1
+ 1a8:	83 ed       	ldi	r24, 0xD3	; 211
+ 1aa:	90 e3       	ldi	r25, 0x30	; 48
+ 1ac:	01 97       	sbiw	r24, 0x01	; 1
+ 1ae:	f1 f7       	brne	.-4      	; 0x1ac <__vector_3+0x44>
+ 1b0:	00 c0       	rjmp	.+0      	; 0x1b2 <__vector_3+0x4a>
+ 1b2:	00 00       	nop
+			_delay_ms(50);
+		}
+	}
+}
+ 1b4:	ff 91       	pop	r31
+ 1b6:	ef 91       	pop	r30
+ 1b8:	bf 91       	pop	r27
+ 1ba:	af 91       	pop	r26
+ 1bc:	9f 91       	pop	r25
+ 1be:	8f 91       	pop	r24
+ 1c0:	7f 91       	pop	r23
+ 1c2:	6f 91       	pop	r22
+ 1c4:	5f 91       	pop	r21
+ 1c6:	4f 91       	pop	r20
+ 1c8:	3f 91       	pop	r19
+ 1ca:	2f 91       	pop	r18
+ 1cc:	0f 90       	pop	r0
+ 1ce:	0f be       	out	0x3f, r0	; 63
+ 1d0:	0f 90       	pop	r0
+ 1d2:	1f 90       	pop	r1
+ 1d4:	18 95       	reti
+
+000001d6 <_exit>:
+ 1d6:	f8 94       	cli
+
+000001d8 <__stop_program>:
+ 1d8:	ff cf       	rjmp	.-2      	; 0x1d8 <__stop_program>
