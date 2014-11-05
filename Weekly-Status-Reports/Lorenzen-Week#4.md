@@ -8,7 +8,7 @@ Week ending: 11-02-2014 <br>
 	2.	Refined schematic layout with Mr. Sayers.
 	3.	Updated library files.
 	4.	Added SMT-440+ band pass filter to eagle library.
-  5.	~~Find SMA connector~~(Mr. Ward)
+  5.	~~Find SMA connector~~(Mr. Ward) <br>
 ##Tasks for next weak
 ---------
 	1.	Review/update board layout.
