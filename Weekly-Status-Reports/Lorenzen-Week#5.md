@@ -10,7 +10,7 @@ Week ending: 11-09-2014 <br>
 	4.  Update board layout.
 	5.  Add RBP-440+ library file.
 	6.  Update library files.
-	7.  Update LED brakout board ayout.
+	7.  Update LED brakout board layout.
 	8.  Get board layout aproved.
 	9.  Get LED brakout board aproved.
 	
