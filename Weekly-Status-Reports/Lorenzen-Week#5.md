@@ -16,7 +16,7 @@ Week ending: 11-09-2014 <br>
 	
 ##Tasks for next weak
 ---------
-  1.  Meet with group discuss testing plan.
-	2.	Fabricate LED brakout boards.
-	3.  Fabricate solder templet for SPTA board.
-	4.  Attach components to board.
+	1. Meet with group discuss testing plan.
+	2. Fabricate LED brakout boards.
+	3. Fabricate solder templet for SPTA board.
+	4. Attach components to board.
