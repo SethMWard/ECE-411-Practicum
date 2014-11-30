@@ -56,7 +56,7 @@
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="97" name="Info" color="10" fill="0" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="yes"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
@@ -5324,7 +5324,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="-7.62" y1="-5.08" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
 <pin name="IN" x="-10.16" y="0" visible="pin" length="short"/>
 <pin name="OUT" x="10.16" y="0" visible="pin" length="short" direction="out" rot="R180"/>
-<pin name="GND" x="0" y="-7.62" visible="pin" length="short" direction="out" rot="R90"/>
+<pin name="GND" x="0" y="-7.62" visible="pin" length="short" direction="sup" rot="R90"/>
 <text x="-5.08" y="5.08" size="1.4224" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
@@ -9734,8 +9734,8 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <part name="TP1" library="testpad" deviceset="TP" device="TP10R"/>
 <part name="SUPPLY7" library="supply2" deviceset="+5V" device=""/>
 <part name="TP3" library="testpad" deviceset="TP" device="TP10R"/>
-<part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
-<part name="R5" library="resistor" deviceset="R-EU_" device="R0805" value="20k"/>
+<part name="FRAME1" library="frames" deviceset="A3L-LOC" device="" value="6"/>
+<part name="R5" library="resistor" deviceset="R-EU_" device="R0805" value="DNC"/>
 <part name="SUPPLY6" library="supply2" deviceset="+5V" device=""/>
 <part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="LED-HEADER" library="con-lstb" deviceset="MA03-2" device="" value="ICSP"/>
@@ -9751,18 +9751,31 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="LT5538" library="LT5538" deviceset="LT5538" device=""/>
 <part name="NVC1" library="sym" deviceset="NCV1117ST50T3G" device=""/>
+<part name="SUPPLY10" library="supply2" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="307.34" y="119.38" size="1.778" layer="97">Power Supply</text>
 <text x="426.72" y="157.48" size="1.778" layer="97">RF Detector</text>
-<rectangle x1="487.68" y1="175.26" x2="530.86" y2="203.2" layer="97"/>
-<text x="515.62" y="198.12" size="1.778" layer="97">Speaker</text>
+<text x="510.54" y="198.12" size="1.778" layer="97">Speaker</text>
 <text x="500.38" y="233.68" size="1.778" layer="97">Vibration Sensors</text>
-<rectangle x1="304.8" y1="116.84" x2="414.02" y2="172.72" layer="97"/>
-<rectangle x1="424.18" y1="109.22" x2="571.5" y2="162.56" layer="97"/>
-<rectangle x1="497.84" y1="231.14" x2="528.32" y2="269.24" layer="97"/>
+<wire x1="302.26" y1="114.3" x2="302.26" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="302.26" y1="175.26" x2="416.56" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="416.56" y1="175.26" x2="416.56" y2="114.3" width="0.1524" layer="97"/>
+<wire x1="416.56" y1="114.3" x2="302.26" y2="114.3" width="0.1524" layer="97"/>
+<wire x1="424.18" y1="162.56" x2="424.18" y2="109.22" width="0.1524" layer="97"/>
+<wire x1="424.18" y1="109.22" x2="571.5" y2="109.22" width="0.1524" layer="97"/>
+<wire x1="571.5" y1="109.22" x2="571.5" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="571.5" y1="162.56" x2="424.18" y2="162.56" width="0.1524" layer="97"/>
+<wire x1="487.68" y1="203.2" x2="530.86" y2="203.2" width="0.1524" layer="97"/>
+<wire x1="530.86" y1="203.2" x2="530.86" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="530.86" y1="175.26" x2="487.68" y2="175.26" width="0.1524" layer="97"/>
+<wire x1="487.68" y1="175.26" x2="487.68" y2="203.2" width="0.1524" layer="97"/>
+<wire x1="497.84" y1="269.24" x2="528.32" y2="269.24" width="0.1524" layer="97"/>
+<wire x1="528.32" y1="269.24" x2="528.32" y2="231.14" width="0.1524" layer="97"/>
+<wire x1="528.32" y1="231.14" x2="497.84" y2="231.14" width="0.1524" layer="97"/>
+<wire x1="497.84" y1="231.14" x2="497.84" y2="269.24" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="457.2" y="218.44"/>
@@ -9801,7 +9814,7 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <instance part="C3" gate="G$1" x="391.16" y="228.6" rot="R180"/>
 <instance part="R1" gate="G$1" x="487.68" y="152.4"/>
 <instance part="R2" gate="G$1" x="472.44" y="129.54" rot="R90"/>
-<instance part="R9" gate="G$1" x="431.8" y="251.46" rot="R90"/>
+<instance part="R9" gate="G$1" x="431.8" y="266.7" rot="R270"/>
 <instance part="L1" gate="G$1" x="464.82" y="147.32" rot="R90"/>
 <instance part="C4" gate="G$1" x="403.86" y="137.16" rot="R180"/>
 <instance part="C5" gate="G$1" x="548.64" y="127" rot="R180"/>
@@ -9844,6 +9857,7 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <instance part="GND8" gate="1" x="576.58" y="213.36"/>
 <instance part="LT5538" gate="LT5538" x="510.54" y="144.78"/>
 <instance part="NVC1" gate="G$1" x="383.54" y="157.48"/>
+<instance part="SUPPLY10" gate="+5V" x="431.8" y="274.32"/>
 </instances>
 <busses>
 </busses>
@@ -10081,16 +10095,12 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <net name="+5V" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="VCC_2"/>
-<wire x1="439.42" y1="241.3" x2="431.8" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="431.8" y1="241.3" x2="391.16" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="439.42" y1="241.3" x2="391.16" y2="241.3" width="0.1524" layer="91"/>
 <label x="386.08" y="241.3" size="1.778" layer="95"/>
-<junction x="431.8" y="241.3"/>
 <wire x1="391.16" y1="241.3" x2="386.08" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="391.16" y1="233.68" x2="391.16" y2="241.3" width="0.1524" layer="91"/>
 <junction x="391.16" y="241.3"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="431.8" y1="246.38" x2="431.8" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="+5V" pin="+5V"/>
 </segment>
 <segment>
@@ -10178,6 +10188,10 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <pinref part="NVC1" gate="G$1" pin="OUT"/>
 <junction x="396.24" y="157.48"/>
 </segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="SUPPLY10" gate="+5V" pin="+5V"/>
+</segment>
 </net>
 <net name="PS_VIN" class="0">
 <segment>
@@ -10229,7 +10243,7 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 <pinref part="ICSP" gate="1" pin="2"/>
 <wire x1="350.52" y1="236.22" x2="355.6" y2="236.22" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="431.8" y1="256.54" x2="431.8" y2="259.08" width="0.1524" layer="91"/>
+<wire x1="431.8" y1="261.62" x2="431.8" y2="259.08" width="0.1524" layer="91"/>
 <junction x="431.8" y="259.08"/>
 <pinref part="TP18" gate="G$1" pin="TP"/>
 <junction x="368.3" y="259.08"/>
@@ -10377,9 +10391,15 @@ Source: www.sumida.com/products/pdf/CEP125.pdf</description>
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,1,396.24,157.48,OUT,+5V,,,,"/>
 <approved hash="104,1,439.42,241.3,U1,VCC_2,+5V,,,"/>
 <approved hash="104,1,439.42,238.76,U1,VCC,+5V,,,"/>
 <approved hash="104,1,439.42,236.22,U1,AVCC,+5V,,,"/>
+<approved hash="104,1,525.78,137.16,LT5538,VCC,+5V,,,"/>
+<approved hash="111,1,528.32,220.98,INDICATOR_3,,,,,"/>
+<approved hash="111,1,535.94,218.44,INDICATOR_2,,,,,"/>
+<approved hash="111,1,482.6,210.82,RF_OUT,,,,,"/>
+<approved hash="113,1,350.52,151.519,S1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
