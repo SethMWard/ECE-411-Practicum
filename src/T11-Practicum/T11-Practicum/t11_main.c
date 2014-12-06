@@ -25,7 +25,10 @@
 #include <util/delay.h>
 #include <stdint.h>
 
-#define THRESHOLD 0x0
+#define THRESHOLD 425
+//#define SILENT
+
+void soundBuzzer(void);
 
 int main(void)
 {
@@ -45,14 +48,17 @@ int main(void)
 	setbit(DDRD, PIND0);		// LED 1 as output
 	setbit(DDRD, PIND1);		// LED 2 as output
 	setbit(DDRD, PIND2);		// LED 3 as output
+	setbit(DDRD, PIND4);		// Buzzer as output
 
 	setbit(DDRC, PINC2);		// RF Detector Enable as output
+	setbit(PORTC, PINC2);		// Enable RF Detector
 	
 
 	
 	/* Setup ADC */
 	
-	/* Prescaler must be set so that ADC has a clock frequency between 50 kHz and 200 kHz
+	/* Prescaler determines the clock rate of the ADC, 50 - 200 kHz is recommended.
+	 *
 	 * Clock speed is 1MHz so a prescaler of 64 provides an appropriate frequency
 	 * Setting ADPS2...0 to 110 sets the prescaler to 64 
 	 */
@@ -86,6 +92,7 @@ int main(void)
 	setbit(PCMSK1, PCINT9);		// Enable interrupt from vibration sensor 2
 	setbit(PCMSK1, PCINT13);	// Enable interrupt from activation switch
 	sei(); // Enable interrupts
+	setbit(ADCSRA, ADSC); // Start conversion
 	
 	/* Loop while waiting for interrupts */
     while(1)
@@ -101,7 +108,9 @@ ISR(ADC_vect)
 	
 	if (level > THRESHOLD)
 	{
+		cli();
 		clearbit(PORTD, PIND2);
+		soundBuzzer();
 	}
 	else
 	{
@@ -114,5 +123,18 @@ ISR(ADC_vect)
 /* Interrupt handler for PCINT1 interrupts */
 ISR(PCINT1_vect)
 {
+	cli();
 	clearbit(PORTD, PIND1);
+	soundBuzzer();
+}
+
+void soundBuzzer(void)
+{
+#ifndef SILENT
+		while (1)
+		{
+			togglebit(PORTD, PIND4);
+			_delay_us(100);
+		}
+#endif
 }
