@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="16in"
+   height="11in"
+   viewBox="0 0 1440 990"
+   id="svg3336"
+   inkscape:version="0.91+devel r13780 custom"
+   sodipodi:docname="SPTA_Box.svg">
+  <metadata
+     id="metadata3366">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3364" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1024"
+     inkscape:window-height="666"
+     id="namedview3362"
+     showgrid="true"
+     inkscape:zoom="0.73493274"
+     inkscape:cx="344.16931"
+     inkscape:cy="416.18296"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3574" />
+  </sodipodi:namedview>
+  <!-- Front-->
+  <!-- Back-->
+  <!-- Left-->
+  <!-- Right-->
+  <!-- Top-->
+  <!-- Bottom-->
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Raster Layer"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.49999619px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="169.65839"
+       y="669.81763"
+       id="text3543"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3545"
+         x="169.65839"
+         y="669.81763">Armed</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.49999619px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="176.19125"
+       y="764.67828"
+       id="text3553"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3555"
+         x="176.19125"
+         y="764.67828">RF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.49999619px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="174.76088"
+       y="716.73285"
+       id="text3557"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3559"
+         x="174.76088"
+         y="716.73285">Moved </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.49999619px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="601.6369"
+       y="679.71039"
+       id="text3561"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3563"
+         x="601.6369"
+         y="679.71039">SPTA - T-11</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Vector"
+     style="display:inline">
+    <g
+       transform="translate(35.256269,115.75737)"
+       id="g3338">
+      <polygon
+         style="fill:none;stroke:#000000;stroke-width:0.89999998"
+         points="405,117 394.38,117 394.38,144 405,144 405,171 394.38,171 394.38,198 405,198 405,225 394.38,225 394.38,270 405,270 405,315 364.5,315 364.5,304.38 324,304.38 324,315 297,315 297,304.38 270,304.38 270,315 243,315 243,304.38 216,304.38 216,315 189,315 189,304.38 162,304.38 162,315 135,315 135,304.38 108,304.38 108,315 81,315 81,304.38 40.5,304.38 40.5,315 0,315 0,270 10.62,270 10.62,225 0,225 0,198 10.62,198 10.62,171 0,171 0,144 10.62,144 10.62,117 0,117 0,90 10.62,90 10.62,45 0,45 0,0 40.5,0 40.5,10.62 81,10.62 81,0 108,0 108,10.62 135,10.62 135,0 162,0 162,10.62 189,10.62 189,0 216,0 216,10.62 243,10.62 243,0 270,0 270,10.62 297,10.62 297,0 324,0 324,10.62 364.5,10.62 364.5,0 405,0 405,45 394.38,45 394.38,90 405,90 "
+         id="polygon3340" />
+    </g>
+    <g
+       transform="translate(463.21755,113.20612)"
+       id="g3342">
+      <polygon
+         style="fill:none;stroke:#000000;stroke-width:0.89999998"
+         points="405,117 394.38,117 394.38,144 405,144 405,171 394.38,171 394.38,198 405,198 405,225 394.38,225 394.38,270 405,270 405,315 364.5,315 364.5,304.38 324,304.38 324,315 297,315 297,304.38 270,304.38 270,315 243,315 243,304.38 216,304.38 216,315 189,315 189,304.38 162,304.38 162,315 135,315 135,304.38 108,304.38 108,315 81,315 81,304.38 40.5,304.38 40.5,315 0,315 0,270 10.62,270 10.62,225 0,225 0,198 10.62,198 10.62,171 0,171 0,144 10.62,144 10.62,117 0,117 0,90 10.62,90 10.62,45 0,45 0,0 40.5,0 40.5,10.62 81,10.62 81,0 108,0 108,10.62 135,10.62 135,0 162,0 162,10.62 189,10.62 189,0 216,0 216,10.62 243,10.62 243,0 270,0 270,10.62 297,10.62 297,0 324,0 324,10.62 364.5,10.62 364.5,0 405,0 405,45 394.38,45 394.38,90 405,90 "
+         id="polygon3344" />
+    </g>
+    <g
+       transform="translate(906.46436,204.30401)"
+       id="g3346">
+      <polygon
+         style="fill:none;stroke:#000000;stroke-width:0.89999998"
+         points="439.38,45 450,45 450,90 439.38,90 439.38,117 450,117 450,144 439.38,144 439.38,171 450,171 450,198 439.38,198 439.38,225 450,225 450,270 439.38,270 439.38,315 411.75,315 411.75,304.38 373.5,304.38 373.5,315 346.5,315 346.5,304.38 319.5,304.38 319.5,315 292.5,315 292.5,304.38 265.5,304.38 265.5,315 238.5,315 238.5,304.38 211.5,304.38 211.5,315 184.5,315 184.5,304.38 157.5,304.38 157.5,315 130.5,315 130.5,304.38 103.5,304.38 103.5,315 76.5,315 76.5,304.38 38.25,304.38 38.25,315 10.62,315 10.62,270 0,270 0,225 10.62,225 10.62,198 0,198 0,171 10.62,171 10.62,144 0,144 0,117 10.62,117 10.62,90 0,90 0,45 10.62,45 10.62,0 38.25,0 38.25,10.62 76.5,10.62 76.5,0 103.5,0 103.5,10.62 130.5,10.62 130.5,0 157.5,0 157.5,10.62 184.5,10.62 184.5,0 211.5,0 211.5,10.62 238.5,10.62 238.5,0 265.5,0 265.5,10.62 292.5,10.62 292.5,0 319.5,0 319.5,10.62 346.5,10.62 346.5,0 373.5,0 373.5,10.62 411.75,10.62 411.75,0 439.38,0 "
+         id="polygon3348" />
+    </g>
+    <g
+       transform="translate(908.26837,548.16815)"
+       id="g3350">
+      <polygon
+         style="fill:none;stroke:#000000;stroke-width:0.89999998"
+         points="450,45 450,90 439.38,90 439.38,117 450,117 450,144 439.38,144 439.38,171 450,171 450,198 439.38,198 439.38,225 450,225 450,270 439.38,270 439.38,315 411.75,315 411.75,304.38 373.5,304.38 373.5,315 346.5,315 346.5,304.38 319.5,304.38 319.5,315 292.5,315 292.5,304.38 265.5,304.38 265.5,315 238.5,315 238.5,304.38 211.5,304.38 211.5,315 184.5,315 184.5,304.38 157.5,304.38 157.5,315 130.5,315 130.5,304.38 103.5,304.38 103.5,315 76.5,315 76.5,304.38 38.25,304.38 38.25,315 10.62,315 10.62,270 0,270 0,225 10.62,225 10.62,198 0,198 0,171 10.62,171 10.62,144 0,144 0,117 10.62,117 10.62,90 0,90 0,45 10.62,45 10.62,0 38.25,0 38.25,10.62 76.5,10.62 76.5,0 103.5,0 103.5,10.62 130.5,10.62 130.5,0 157.5,0 157.5,10.62 184.5,10.62 184.5,0 211.5,0 211.5,10.62 238.5,10.62 238.5,0 265.5,0 265.5,10.62 292.5,10.62 292.5,0 319.5,0 319.5,10.62 346.5,10.62 346.5,0 373.5,0 373.5,10.62 411.75,10.62 411.75,0 439.38,0 439.38,45 "
+         id="polygon3352" />
+    </g>
+    <g
+       transform="translate(483.62758,446.0649)"
+       id="g3358">
+      <polygon
+         style="fill:none;stroke:#000000;stroke-width:0.89999998"
+         points="405,103.5 405,130.5 394.38,130.5 394.38,157.5 405,157.5 405,184.5 394.38,184.5 394.38,211.5 405,211.5 405,238.5 394.38,238.5 394.38,265.5 405,265.5 405,292.5 394.38,292.5 394.38,319.5 405,319.5 405,346.5 394.38,346.5 394.38,373.5 405,373.5 405,411.75 394.38,411.75 394.38,439.38 364.5,439.38 364.5,450 324,450 324,439.38 297,439.38 297,450 270,450 270,439.38 243,439.38 243,450 216,450 216,439.38 189,439.38 189,450 162,450 162,439.38 135,439.38 135,450 108,450 108,439.38 81,439.38 81,450 40.5,450 40.5,439.38 10.62,439.38 10.62,411.75 0,411.75 0,373.5 10.62,373.5 10.62,346.5 0,346.5 0,319.5 10.62,319.5 10.62,292.5 0,292.5 0,265.5 10.62,265.5 10.62,238.5 0,238.5 0,211.5 10.62,211.5 10.62,184.5 0,184.5 0,157.5 10.62,157.5 10.62,130.5 0,130.5 0,103.5 10.62,103.5 10.62,76.5 0,76.5 0,38.25 10.62,38.25 10.62,10.62 40.5,10.62 40.5,0 81,0 81,10.62 108,10.62 108,0 135,0 135,10.62 162,10.62 162,0 189,0 189,10.62 216,10.62 216,0 243,0 243,10.62 270,10.62 270,0 297,0 297,10.62 324,10.62 324,0 364.5,0 364.5,10.62 394.38,10.62 394.38,38.25 405,38.25 405,76.5 394.38,76.5 394.38,103.5 "
+         id="polygon3360" />
+    </g>
+    <g
+       id="g3533"
+       transform="translate(28.063791,-68.88385)">
+      <g
+         id="g3354"
+         transform="translate(22.5,517.5)">
+        <polygon
+           id="polygon3356"
+           points="405,103.5 405,130.5 394.38,130.5 394.38,157.5 405,157.5 405,184.5 394.38,184.5 394.38,211.5 405,211.5 405,238.5 394.38,238.5 394.38,265.5 405,265.5 405,292.5 394.38,292.5 394.38,319.5 405,319.5 405,346.5 394.38,346.5 394.38,373.5 405,373.5 405,411.75 394.38,411.75 394.38,439.38 364.5,439.38 364.5,450 324,450 324,439.38 297,439.38 297,450 270,450 270,439.38 243,439.38 243,450 216,450 216,439.38 189,439.38 189,450 162,450 162,439.38 135,439.38 135,450 108,450 108,439.38 81,439.38 81,450 40.5,450 40.5,439.38 10.62,439.38 10.62,411.75 0,411.75 0,373.5 10.62,373.5 10.62,346.5 0,346.5 0,319.5 10.62,319.5 10.62,292.5 0,292.5 0,265.5 10.62,265.5 10.62,238.5 0,238.5 0,211.5 10.62,211.5 10.62,184.5 0,184.5 0,157.5 10.62,157.5 10.62,130.5 0,130.5 0,103.5 10.62,103.5 10.62,76.5 0,76.5 0,38.25 10.62,38.25 10.62,10.62 40.5,10.62 40.5,0 81,0 81,10.62 108,10.62 108,0 135,0 135,10.62 162,10.62 162,0 189,0 189,10.62 216,10.62 216,0 243,0 243,10.62 270,10.62 270,0 297,0 297,10.62 324,10.62 324,0 364.5,0 364.5,10.62 394.38,10.62 394.38,38.25 405,38.25 405,76.5 394.38,76.5 394.38,103.5 "
+           style="fill:none;stroke:#000000;stroke-width:0.89999998" />
+      </g>
+      <g
+         id="g3526">
+        <circle
+           style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.66158664px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           id="path3486"
+           cx="271.02567"
+           cy="619.79102"
+           r="20.369205" />
+        <g
+           id="g3502"
+           transform="translate(0,179.99999)">
+          <ellipse
+             ry="8.6884232"
+             rx="8.6884241"
+             cy="549"
+             cx="331.44882"
+             id="path3488"
+             style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.6231519px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+          <ellipse
+             style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.6231519px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             id="ellipse3490"
+             cx="331.44882"
+             cy="595.79999"
+             rx="8.6884241"
+             ry="8.6884232" />
+          <ellipse
+             inkscape:transform-center-y="-34.276169"
+             inkscape:transform-center-x="-1.8040089"
+             ry="8.6884232"
+             rx="8.6884241"
+             cy="642.59998"
+             cx="331.44882"
+             id="ellipse3492"
+             style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.6231519px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        </g>
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.49999619px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="250.02287"
+       y="699.15698"
+       id="text3547"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3549"
+         x="250.02287"
+         y="699.15698"></tspan><tspan
+         sodipodi:role="line"
+         x="250.02287"
+         y="746.03198"
+         id="tspan3551" /></text>
+  </g>
+</svg>
