@@ -25,23 +25,23 @@
 #include <util/delay.h>
 #include <stdint.h>
 
-#define THRESHOLD 425
+//#define THRESHOLD 425
+#define THRESHOLD 300
 //#define SILENT
 
-void soundBuzzer(void);
+volatile uint16_t level;
 
 int main(void)
 {
 	
 	int i; // Counter index
 	
-	/* Set pin directions */
+	/* Set pin directions and initial values */
 	clearbit(DDRC, PINC0);		// Vibration Sensor 1 as input
 	clearbit(DDRC, PINC1);		// Vibration Sensor 2 as input
 	clearbit(DDRC, PINC5);		// Activation Switch as input
 	setbit(PORTC, PINC0);		// Enable pull-up for Vibration Sensor 1
 	setbit(PORTC, PINC1);		// Enable pull-up for Vibration Sensor 2
-	setbit(PORTC, PINC5);		// Enable pull-up for Activation Switch
 	setbit(PORTD, PIND0);		// Turn LED 1 off
 	setbit(PORTD, PIND1);		// Turn LED 2 off
 	setbit(PORTD, PIND2);		// Turn LED 3 off
@@ -49,7 +49,6 @@ int main(void)
 	setbit(DDRD, PIND1);		// LED 2 as output
 	setbit(DDRD, PIND2);		// LED 3 as output
 	setbit(DDRD, PIND4);		// Buzzer as output
-
 	setbit(DDRC, PINC2);		// RF Detector Enable as output
 	setbit(PORTC, PINC2);		// Enable RF Detector
 	
@@ -66,7 +65,7 @@ int main(void)
 	setbit(ADCSRA, ADPS1);
 	clearbit(ADCSRA, ADPS0);
 	
-	clearbit(ADMUX, ADLAR); // Right align ADC register
+	clearbit(ADMUX, ADLAR);		// Right align ADC register
 	
 	/* Select ADC3 by setting MUX3...0 to 0011 in ADMUX */
 	clearbit(ADMUX, MUX3);
@@ -76,11 +75,14 @@ int main(void)
 	
 	/* Select external voltage reference by setting REFS1...0 to 00 in ADMUX */
 	clearbit(ADMUX, REFS1);
-	clearbit(ADMUX, REFS0);
+	setbit(ADMUX, REFS0);
 	
-	setbit(ADCSRA, ADIE); // Enable ADC interrupts
-	setbit(ADCSRA, ADEN); // Enable ADC
+	setbit(ADCSRA, ADIE);		// Enable ADC interrupts
+	setbit(ADCSRA, ADEN);		// Enable ADC
 	
+	/* Toggle Activation LED with half second delay
+	 * Delay allows time for device to be placed
+	 */
 	for (i = 0; i < 15; ++i)
 	{
 		_delay_ms(500);
@@ -90,13 +92,13 @@ int main(void)
 	setbit(PCICR, PCIE1);		// Enable interrupts from PCINT[14:8]
 	setbit(PCMSK1, PCINT8);		// Enable interrupt from vibration sensor 1
 	setbit(PCMSK1, PCINT9);		// Enable interrupt from vibration sensor 2
-	setbit(PCMSK1, PCINT13);	// Enable interrupt from activation switch
-	sei(); // Enable interrupts
-	setbit(ADCSRA, ADSC); // Start conversion
+	sei();						// Enable interrupts
+	setbit(ADCSRA, ADSC);		// Start conversion
 	
 	/* Loop while waiting for interrupts */
     while(1)
     {
+		// wait for interrupt
     }
 }
 
@@ -104,13 +106,11 @@ int main(void)
 ISR(ADC_vect)
 {
 	uint8_t low_bits = ADCL;					// Get lower 8 bits
-	uint16_t level = (ADCH << 8) | low_bits;	// Add upper 2 bits to lower 8 bits
+	level = (ADCH << 8) | low_bits;	// Add upper 2 bits to lower 8 bits
 	
 	if (level > THRESHOLD)
 	{
-		cli();
-		clearbit(PORTD, PIND2);
-		soundBuzzer();
+		triggerDevice(0);
 	}
 	else
 	{
@@ -123,11 +123,30 @@ ISR(ADC_vect)
 /* Interrupt handler for PCINT1 interrupts */
 ISR(PCINT1_vect)
 {
-	cli();
-	clearbit(PORTD, PIND1);
-	soundBuzzer();
+	triggerDevice(1);
 }
 
+/* Triggers device
+ * 0 = RF
+ * 1 = Movement
+ */
+void triggerDevice(char source)
+{
+	cli();
+	switch (source)
+	{
+	case 0:
+		clearbit(PORTD, PIND2); // Turn on RF LED
+		break;
+	case 1:
+	default:
+		clearbit(PORTD, PIND1); // Turn on Movement LED
+		break;		
+	}
+	soundBuzzer();	
+}
+
+// Turns buzzer on
 void soundBuzzer(void)
 {
 #ifndef SILENT
@@ -138,3 +157,5 @@ void soundBuzzer(void)
 		}
 #endif
 }
+
+

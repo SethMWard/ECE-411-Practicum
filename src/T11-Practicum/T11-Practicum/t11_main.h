@@ -18,4 +18,8 @@
 /* Set CPU frequency */
 #define F_CPU 1000000UL
 
+/* Function Declarations */
+void soundBuzzer(void);
+void triggerDevice(char source);
+
 #endif /* TD_MAIN_H_ */
