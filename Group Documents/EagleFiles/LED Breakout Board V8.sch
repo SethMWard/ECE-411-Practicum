@@ -2350,7 +2350,9 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <part name="LED2" library="led" deviceset="LED" device="10MM"/>
 <part name="LED3" library="led" deviceset="LED" device="10MM"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="eagle-ltspice" deviceset="R" device="0204/7" value="330"/>
+<part name="R2" library="eagle-ltspice" deviceset="R" device="0207/10" value="330"/>
+<part name="R3" library="eagle-ltspice" deviceset="R" device="0207/10" value="330"/>
+<part name="R1" library="eagle-ltspice" deviceset="R" device="0207/10" value="330"/>
 </parts>
 <sheets>
 <sheet>
@@ -2366,7 +2368,9 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <instance part="LED2" gate="G$1" x="83.82" y="63.5" rot="R90"/>
 <instance part="LED3" gate="G$1" x="83.82" y="76.2" rot="R90"/>
 <instance part="GND2" gate="1" x="68.58" y="81.28"/>
-<instance part="R1" gate="G$1" x="86.36" y="43.18" rot="R180"/>
+<instance part="R2" gate="G$1" x="73.66" y="63.5" rot="R180"/>
+<instance part="R3" gate="G$1" x="73.66" y="76.2" rot="R180"/>
+<instance part="R1" gate="G$1" x="73.66" y="50.8" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -2428,26 +2432,37 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <pinref part="SV1" gate="1" pin="2"/>
 <wire x1="124.46" y1="66.04" x2="129.54" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="66.04" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="43.18" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
 <label x="93.98" y="43.18" size="1.778" layer="95"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<wire x1="81.28" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="43.18" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="68.58" y1="50.8" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="63.5" x2="68.58" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="76.2" x2="81.28" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
 <junction x="68.58" y="63.5"/>
-<wire x1="68.58" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
-<junction x="68.58" y="50.8"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="43.18" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
+<junction x="68.58" y="50.8"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
+<wire x1="78.74" y1="76.2" x2="81.28" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="78.74" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="78.74" y1="50.8" x2="81.28" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
